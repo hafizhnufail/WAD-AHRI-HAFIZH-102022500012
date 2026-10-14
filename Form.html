@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pelanggan dan Member Venue</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+    <h1>Pendaftaran Member Baru</h1>
+    <p>Silakan isi form di bawah ini untuk mendaftarkan pelanggan baru.</p>
+
+    <nav>
+        <a href="Table.html" class="btn-link">&laquo; Kembali ke Daftar Pelanggan</a>
+    </nav>
+    <hr>
+
+    <h2>Form Pendaftaran Member Baru</h2>
+    <form action="Table.html" method="post">
+        <label for="nama">Nama Lengkap:</label><br>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="nohp">No HP:</label><br>
+        <input type="text" id="nohp" name="nohp" required><br><br>
+
+        <label for="level">Level Member:</label><br>
+        <select id="level" name="level">
+            <option value="Basic">Basic</option>
+            <option value="Gold">Gold</option>
+            <option value="VIP">VIP</option>
+        </select><br><br>
+
+        <input type="submit" value="Simpan">
+    </form>
+</body>
+</html>
