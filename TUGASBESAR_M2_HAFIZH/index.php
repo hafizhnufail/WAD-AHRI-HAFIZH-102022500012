@@ -12,7 +12,7 @@ try {
     die("Koneksi gagal: " . $e->getMessage());
 }
 
-$stmt = $pdo->query("SELECT * FROM members ORDER BY id DESC");
+$stmt = $pdo->query("SELECT * FROM tabel_data ORDER BY id DESC");
 $members = $stmt->fetchAll();
 ?>
 
@@ -22,7 +22,6 @@ $members = $stmt->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Pelanggan dan Member Venue</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="design.css">
 </head>
 
@@ -53,6 +52,7 @@ $members = $stmt->fetchAll();
                 <th>Level Member</th>
                 <th>Aksi</th>
             </tr>
+
         </thead>
         <tbody>
             <?php if (empty($members)): ?>

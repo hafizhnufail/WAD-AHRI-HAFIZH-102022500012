@@ -1,14 +1,14 @@
 <?php
+$host = "localhost";
+$dbname = "db_venue";
+$username = "root";
+$password = "";
 
-$host = 'localhost';
-$user = 'root';
-$password = '';
-$database = 'db_venue';
-
-$conn = new mysqli ($host, $user, $password, $database);
-
-if ($conn->connect_error) {
-    die(''. $conn->connect_error);
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    die("Koneksi gagal: " . $e->getMessage());
 }
-
 ?>
